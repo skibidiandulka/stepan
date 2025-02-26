@@ -12,14 +12,11 @@
     color: var(--text-color);
     margin: 0;
     padding: 0;
-    position: relative;
-    min-height: 100vh;
   }
   
   .container {
     width: 90%;
     margin: auto;
-    padding-bottom: 60px; /* padding for footer */
   }
   
   header {
@@ -48,6 +45,33 @@
     color: var(--secondary-color);
   }
   
+  main {
+    padding: 20px 0;
+  }
+  
+  .classmate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(255, 0, 255, 0.2), rgba(255, 255, 255, 0));
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid var(--text-muted-color);
+    border-radius: 10px;
+  }
+  
+  .classmate img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  
+  .text {
+    text-align: center;
+    color: var(--text-muted-color);
+  }
+  
   footer {
     background-color: var(--primary-color);
     color: var(--text-color);
@@ -56,5 +80,17 @@
     position: absolute;
     width: 100%;
     bottom: 0;
+  }
+  
+  @media (min-width: 768px) {
+    .classmate {
+      flex-direction: row;
+      text-align: left;
+    }
+  
+    .classmate img {
+      margin-right: 20px;
+      margin-bottom: 0;
+    }
   }
   
